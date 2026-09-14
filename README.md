@@ -1,1 +1,1 @@
-harjoitusprojekti
+Tämä on harjoitusprojekti.
