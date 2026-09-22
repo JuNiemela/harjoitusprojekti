@@ -22,9 +22,7 @@ body {
 /*HEADER JA NAV*/
 header{
     background-color: brown;
-}
-.header-linkit{
-    background-color: rgb(150, 110, 61);
+    text-align: center;
 }
 
 /*OTSIKOT*/
@@ -44,6 +42,39 @@ h3 {
     background-color: aqua;
 }
 
+.tekstit{
+    margin-bottom: 10px;
+}
+
+.tekstit p{
+    margin-bottom: 15px;
+}
+
 article {
     max-width: 80%;
+}
+
+/**FOOTER*/
+footer{
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
+}
+
+footer nav{
+    display: flex;
+    gap: 30px;
+}
+
+
+footer nav a{
+    background-color: chartreuse;
+    padding: 5px 5px;
+}
+
+footer p{
+    margin: 5px;
 }
