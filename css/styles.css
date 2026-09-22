@@ -12,7 +12,7 @@ body {
 }
 
 /*MAIN*/
-.conteiner {
+.container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -22,7 +22,22 @@ body {
 /*HEADER JA NAV*/
 header{
     background-color: brown;
-    text-align: center;
+    display: flex;
+    flex-direction: column; /*H1 JA NAV PYSYY PÄÄLLEKKÄIN*/
+    flex-wrap: wrap;
+    align-items: center;/*KESKITETÄÄN SISÄLTÖ*/
+}
+
+header nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;/*LINKKIEN VÄLI*/
+}
+
+header nav a{
+    background-color: chartreuse;
+    padding: 5px 5px;
+    margin-bottom: 5px;
 }
 
 /*OTSIKOT*/
@@ -40,10 +55,14 @@ h3 {
 
 .otsikot {
     background-color: aqua;
+    text-align: center;
 }
 
 .tekstit{
+    text-align: center;
     margin-bottom: 10px;
+    background-color: chocolate;
+    padding: 20px;
 }
 
 .tekstit p{
@@ -52,6 +71,8 @@ h3 {
 
 article {
     max-width: 80%;
+    margin: 0 auto;
+    
 }
 
 /**FOOTER*/
@@ -66,6 +87,7 @@ footer{
 
 footer nav{
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
