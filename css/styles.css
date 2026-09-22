@@ -11,14 +11,20 @@ body {
     color: rgb(54, 54, 54);
 }
 
-/*NAV*/
-nav {
-    background-color: antiquewhite;
+/*MAIN*/
+.conteiner {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
 }
 
-/*MAIN*/
-main {
-    margin: 20px;
+/*HEADER JA NAV*/
+header{
+    background-color: brown;
+}
+.header-linkit{
+    background-color: rgb(150, 110, 61);
 }
 
 /*OTSIKOT*/
@@ -30,10 +36,14 @@ h2 {
     margin-bottom: 10px;
 }
 
-h3{
+h3 {
     margin-bottom: 5px;
 }
 
-article{
+.otsikot {
+    background-color: aqua;
+}
+
+article {
     max-width: 80%;
 }
