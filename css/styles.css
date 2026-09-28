@@ -78,7 +78,7 @@ h3 {
     background-color: antiquewhite;
     padding: 40px;
     line-height: 1.5;
-    font-size: 1.1rem; 
+    font-size: 1.1rem;
     border: 1px solid black;
     border-radius: 8px;
 }
@@ -90,8 +90,29 @@ h3 {
 article {
     max-width: 80%;
     margin: 0 auto;
-
 }
+
+.kielilista ul {
+    list-style: none;
+    padding: 10px;
+    display: grid;
+    gap: 10px;
+}
+
+.kielilista {
+    background: #f7f7f7;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.kielilista li strong{
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
 
 /**FOOTER*/
 .footer {
@@ -113,7 +134,8 @@ article {
 
 .footer-nav ul {
     display: flex;
-    flex-direction: column; /*Linkit päällekkäin*/
+    flex-direction: column;
+    /*Linkit päällekkäin*/
     gap: 10px;
     list-style: none;
     flex-wrap: wrap;
