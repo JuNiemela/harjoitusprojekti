@@ -13,22 +13,58 @@ body {
 
 /*MAIN*/
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 0px;
+    background-color: bisque;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    /*----------GRID ASETUKSET JA ASETTELU------------*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    min-height: 100vh;
 }
 
-/*HEADER JA NAV*/
+/*HEADER*/
 .header {
-    display: flex;
-    justify-content: space-between;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     padding: 20px;
     background-color: rgb(253, 192, 117);
-    flex-wrap: wrap;
     border-bottom: 1px solid black;
+    gap: 20px;
 }
+
+/*NAV*/
+.nav {
+    grid-area: nav;
+    background-color: rgb(255, 219, 164);
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+}
+
+.nav ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+    gap: 20px;
+    list-style: none;
+    justify-content: center;
+}
+
+.nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 5px;
+}
+
 
 /*LOGO*/
 .logo {
@@ -36,22 +72,6 @@ body {
     max-width: 250px;
     width: auto;
     margin-bottom: 20px;
-}
-
-/*HEADER LINKIt*/
-.header-nav ul {
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-}
-
-/*LINKKIEN MUOTOILU*/
-.header-nav a {
-    color: black;
-    text-decoration: none;
-    margin: 15px;
-    padding: 5px;
-    font-size: 1.3rem;
 }
 
 /*OTSIKOT*/
@@ -125,29 +145,27 @@ article {
 
 /**FOOTER*/
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
     padding: 20px 40px;
-    margin-top: 10rem;
     background-color: rgb(253, 192, 117);
-    flex-wrap: wrap;
     border-top: 1px solid black;
 }
 
 .footer-logo {
-    height: 80px;
-    max-width: 250px;
+    max-width: 120px;
+    height: auto;
     margin: 20px;
 }
 
 .footer-nav ul {
-    display: flex;
-    flex-direction: column;
-    /*Linkit päällekkäin*/
+    display: grid;
+    grid-auto-flow: row;
     gap: 10px;
     list-style: none;
-    flex-wrap: wrap;
+    justify-items: end;
 }
 
 .footer-nav a {
