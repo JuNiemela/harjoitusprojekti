@@ -11,9 +11,13 @@
 </head>
 
 <body>
-    <header class="header">
-        <img class="logo" src="images/logo.png" alt="logossa virityskoneisto sekä teksti kieli ja kitara">
-        <nav class="header-nav"><!--Navigointi linkit-->
+    <div class="container">
+
+        <header class="header">
+            <img class="logo" src="images/logo.png" alt="logossa virityskoneisto sekä teksti kieli ja kitara">
+        </header>
+
+        <nav class="nav">
             <ul>
                 <li><a href="index.html">Etusivu</a></li>
                 <li><a href="tuotteet.html">Tuotteet</a></li>
@@ -22,61 +26,67 @@
                 <li><a href="yhteys.html">Yhteystiedot</a></li>
             </ul>
         </nav>
-    </header>
+        <main class="main">
 
-    <main class="container">
-        <section class="otsikot"> <!--Tervehdys teksti-->
-            <h1>Kielet</h2>
+            <section class="otsikot"> <!--Tervehdys teksti-->
+                <h1>Kielet</h1>
                 <h2>Suuri valikoima parhaita kieliä</h2>
-        </section>
-        <article class="tekstit"> <!--Sisältö tekstiä-->
-            <h3>Kielet</h3>
-            <p>
-                Kielet ovat soittimen äänen ja tuntuman ydin. Oikean kielisetin valinta vaikuttaa suoraan
-                soittotuntumaan, soundiin ja siihen, miten soitin reagoi dynamiikkaan. Valikoimastamme löydät kielet
-                akustisiin, sähkö- ja bassokitaroihin sekä muihin kielisoittimiin. Tarjoamme vaihtoehtoja eri
-                paksuuksilla, materiaaleilla ja rakenteilla, jotta jokainen soittaja löytää juuri oman tyylinsä mukaisen
-                setin.
-            </p>
-            <h3>Laadukkaat kielet joka soittajalle</h3>
-            <p>Olitpa aloittelija, harrastaja tai ammattilainen, oikeat kielet tekevät soitosta inspiroivaa.
-                Valikoimamme kattaa pehmeät ja helposti soivat kevyet kielet, voimakkaan soundin tuottavat paksummat
-                kielet sekä erikoismateriaalit, jotka tuovat soittoon lisää lämpöä, kirkkautta tai kestävyyttä.
-            </p>
-
-            <section class="kielilista">
-                <h3>Kielityypit</h3>
-                <ul>
-                    <li>
-                        <strong>Akustisen kitaran kielet</strong>
-                        Kirkas ja lämmin soundi, sopii akustisiin
-                        kitaroihin.
-                    </li>
-                    <li>
-                        <strong>Sähkökitaran kielet</strong>
-                        Kirkas ja lämmin soundi, sopii akustisiin kitaroihin.
-                    </li>
-                    <li>
-                        <strong>Bassokitaran kielet</strong>
-                        Syvä ja voimakas soundi, bassokitaroihin.
-                    </li>
-                </ul>
-
             </section>
-        </article>
-    </main>
-    <footer class="footer"> <!--Footeri-->
-        <img class="footer-logo" src="images/logo.png" alt="logossa virityskoneisto sekä teksti kieli ja kitara">
-        <nav class="footer-nav"> <!--Navigointi linkit-->
-            <ul>
-                <li><a href="index.html">Etusivu</a></li>
-                <li><a href="tuotteet.html">Tuotteet</a></li>
-                <li><a href="kitarat.html">Kitarat</a></li>
-                <li><a href="kielet.html">Kielet</a></li>
-                <li><a href="yhteys.html">Yhteystiedot</a></li>
-            </ul>
-        </nav>
-    </footer>
+            <article class="tekstit"> <!--Sisältö tekstiä-->
+                <h3>Kielet</h3>
+                <p>
+                    Kielet ovat soittimen äänen ja tuntuman ydin. Oikean kielisetin valinta vaikuttaa suoraan
+                    soittotuntumaan, soundiin ja siihen, miten soitin reagoi dynamiikkaan. Valikoimastamme löydät kielet
+                    akustisiin, sähkö- ja bassokitaroihin sekä muihin kielisoittimiin. Tarjoamme vaihtoehtoja eri
+                    paksuuksilla, materiaaleilla ja rakenteilla, jotta jokainen soittaja löytää juuri oman tyylinsä
+                    mukaisen
+                    setin.
+                </p>
+                <h3>Laadukkaat kielet joka soittajalle</h3>
+                <p>Olitpa aloittelija, harrastaja tai ammattilainen, oikeat kielet tekevät soitosta inspiroivaa.
+                    Valikoimamme kattaa pehmeät ja helposti soivat kevyet kielet, voimakkaan soundin tuottavat paksummat
+                    kielet sekä erikoismateriaalit, jotka tuovat soittoon lisää lämpöä, kirkkautta tai kestävyyttä.
+                </p>
+
+                <section class="kielilista">
+                    <h3>Kielityypit</h3>
+                    <ul>
+                        <li>
+                            <strong>Akustisen kitaran kielet</strong>
+                            Kirkas ja lämmin soundi, sopii akustisiin
+                            kitaroihin.
+                        </li>
+                        <li>
+                            <strong>Sähkökitaran kielet</strong>
+                            Kirkas ja lämmin soundi, sopii akustisiin kitaroihin.
+                        </li>
+                        <li>
+                            <strong>Bassokitaran kielet</strong>
+                            Syvä ja voimakas soundi, bassokitaroihin.
+                        </li>
+                    </ul>
+
+                </section>
+            </article>
+        </main>
+        <footer class="footer"> <!--Footeri-->
+            <div class="footer-left">
+                <img class="footer-logo" src="images/logo.png"
+                    alt="logossa virityskoneisto sekä teksti kieli ja kitara">
+                <p class="copyright">© 2026 Kieli ja Kitara. Kaikki oikeudet pidätetään.</p>
+            </div>
+
+            <nav class="footer-nav"> <!--Navigointi linkit-->
+                <ul>
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="tuotteet.html">Tuotteet</a></li>
+                    <li><a href="kitarat.html">Kitarat</a></li>
+                    <li><a href="kielet.html">Kielet</a></li>
+                    <li><a href="yhteys.html">Yhteystiedot</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
 </body>
 
 </html>
