@@ -1,4 +1,6 @@
-/*Perusasetukset*/
+/*--------------*/
+/*PERUSASETUKSET*/
+/*--------------*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,44 +10,66 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: bisque;
+    /*TAUSTAVÄRI*/
     color: rgb(77, 76, 76);
+    /*PERUSTEKSTIN VÄRI*/
 }
 
-/*MAIN*/
+/*-------------------------*/
+/* CONTAINER (GRID-LAYOUT) */
+/*-------------------------*/
+
 .container {
     background-color: bisque;
+    /*TAUSTAVÄRI*/
     width: 100%;
     max-width: 100%;
+    /*TÄYTTÄÄ KOKO IKKUNAN*/
     margin: 0;
     padding: 0;
-    /*----------GRID ASETUKSET JA ASETTELU------------*/
+    /*-GRID ASETUKSET JA ASETTELU-*/
     display: grid;
+    /*SIVUN RAKENNE GRIDILLÄ*/
     grid-template-columns: 1fr;
+    /*YKSI PALSTA*/
     grid-template-rows: auto auto 1fr auto;
+    /*HEADER, NAV, MAIN, FOOTER*/
     grid-template-areas:
         "header"
         "nav"
         "main"
         "footer";
     min-height: 100vh;
+    /*SIVUN MINIMI KORKEUS KOKO IKKUNAN VERRAN*/
 }
 
-/*HEADER*/
+/*------------------*/
+/*      HEADER      */
+/*----------------*/
+
 .header {
     grid-area: header;
+    /*GRID AREA NAME*/
     display: grid;
     grid-template-columns: auto 1fr auto;
+    /*LOGO + TYHJÄ TILA + MAHDOLLINEN OIKEA ELEMENTTI*/
     align-items: center;
     padding: 20px;
     background-color: rgb(253, 192, 117);
+    /*TAUSTAVÄRI*/
     border-bottom: 1px solid black;
     gap: 20px;
 }
 
-/*NAV*/
+/*--------------*/
+/*      NAV     */
+/*--------------*/
+
 .nav {
     grid-area: nav;
+    /*GRID AREA NAME*/
     background-color: rgb(255, 219, 164);
+    /*TAUSTAVÄRI*/
     border-bottom: 1px solid black;
     padding: 10px 0;
 }
@@ -65,8 +89,10 @@ body {
     padding: 5px;
 }
 
+/*--------------*/
+/*      LOGO    */
+/*--------------*/
 
-/*LOGO*/
 .logo {
     height: 80px;
     max-width: 250px;
@@ -74,7 +100,10 @@ body {
     margin-bottom: 20px;
 }
 
-/*OTSIKOT*/
+/*------------------*/
+/*      OTSIKOT     */
+/*------------------*/
+
 h1 {
     margin-bottom: 25px;
     font-family: "Montserrat", sans-serif;
@@ -90,12 +119,17 @@ h3 {
     font-family: "Montserrat", sans-serif;
 }
 
-/*SISÄLLÖN OTSIKOT*/
+/* ----------------------------- */
+/* SISÄLLÖN OTSIKOT JA TEKSTIT   */
+/* ----------------------------- */
 .otsikot {
     text-align: center;
 }
 
-/*SISÄLLÖN TEKSTIT*/
+/*----------------------*/
+/*  SISÄLLÖN TEKSTIT    */
+/*----------------------*/
+
 .tekstit {
     text-align: center;
     margin-bottom: 10px;
@@ -106,6 +140,7 @@ h3 {
     border: 1px solid black;
     border-radius: 8px;
     word-wrap: break-word;
+    /*ESTÄÄ TEKSTIN YLIVUODON*/
 }
 
 /*TEKSTIT*/
@@ -118,7 +153,10 @@ article {
     margin: 0 auto;
 }
 
-/*KIELISIVUN KIELILISTA*/
+/*---------------------------*/
+/*  KIELISIVUN KIELILISTA    */
+/*---------------------------*/
+
 .kielilista ul {
     list-style: none;
     padding: 10px;
@@ -142,30 +180,56 @@ article {
     margin-bottom: 10px;
 }
 
+/*-----------------*/
+/*      FOOTER     */
+/*-----------------*/
 
-/**FOOTER*/
 .footer {
     grid-area: footer;
     display: grid;
     grid-template-columns: auto 1fr;
+    /*VASEN: LOGO + COPYRIGHT, OIKEA: NAVIGAATIO*/
     align-items: start;
     padding: 20px 40px;
     background-color: rgb(253, 192, 117);
     border-top: 1px solid black;
 }
 
+/*VASEN LAITA*/
+.footer-left {
+    display: grid;
+    grid-auto-flow: row;
+    justify-items: start;
+    gap: 5px;
+}
+
+/*LOGO*/
 .footer-logo {
     max-width: 120px;
     height: auto;
-    margin: 20px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+/*COPYRIGHT*/
+.copyright {
+    font-size: 0.9rem;
+    margin: 5px;
+}
+
+/*OIKEA LAITA*/
+.footer-nav {
+    justify-self: end;
 }
 
 .footer-nav ul {
     display: grid;
     grid-auto-flow: row;
+    /*LINKIT PÄÄLLEKKÄIN*/
     gap: 10px;
     list-style: none;
     justify-items: end;
+    /*KOHDISTUU OIKEALLE*/
 }
 
 .footer-nav a {
