@@ -72,6 +72,7 @@ body {
     /*TAUSTAVÄRI*/
     border-bottom: 1px solid black;
     padding: 10px 0;
+    margin-bottom: 20px;
 }
 
 .nav ul {
@@ -190,7 +191,8 @@ article {
     grid-template-columns: auto 1fr;
     /*VASEN: LOGO + COPYRIGHT, OIKEA: NAVIGAATIO*/
     align-items: start;
-    padding: 20px 40px;
+    padding: 20px 20px;
+    margin-top: 25px;
     background-color: rgb(253, 192, 117);
     border-top: 1px solid black;
 }
@@ -205,9 +207,9 @@ article {
 
 /*LOGO*/
 .footer-logo {
-    max-width: 120px;
+    max-width: 200px;
     height: auto;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 5px;
 }
 
@@ -227,6 +229,8 @@ article {
     grid-auto-flow: row;
     /*LINKIT PÄÄLLEKKÄIN*/
     gap: 10px;
+    margin-right: 15px;
+    padding: 5px;
     list-style: none;
     justify-items: end;
     /*KOHDISTUU OIKEALLE*/
