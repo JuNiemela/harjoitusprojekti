@@ -45,7 +45,7 @@ body {
 
 /*------------------*/
 /*      HEADER      */
-/*----------------*/
+/*------------------*/
 
 .header {
     grid-area: header;
@@ -90,6 +90,13 @@ body {
     padding: 5px;
 }
 
+nav a.active {
+    font-weight: bold;
+    background-color: rgb(253, 192, 117);
+    border-radius: 5px;
+    
+}
+
 /*--------------*/
 /*      LOGO    */
 /*--------------*/
@@ -132,7 +139,7 @@ h3 {
 /*----------------------*/
 
 .tekstit {
-    text-align: center;
+    text-align: justify;
     margin-bottom: 10px;
     background-color: antiquewhite;
     padding: 40px;
