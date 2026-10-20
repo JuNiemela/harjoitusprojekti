@@ -86,7 +86,7 @@ body {
     margin-bottom: 20px;
 }
 
-.nav ul {
+.nav>ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, auto));
     gap: 20px;
@@ -101,10 +101,49 @@ body {
     padding: 5px;
 }
 
+.nav a:hover {
+    background-color: rgb(253, 192, 117);
+    color: black;
+}
+
 nav a.active {
     background-color: rgb(253, 192, 117);
     border-radius: 5px;
+}
 
+/*DROPDOWN VALIKKO*/
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    background-color: rgb(255, 219, 164);
+    padding: 0;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgb(253, 192, 117);
+    color: black;
 }
 
 /*------------------*/
@@ -162,19 +201,19 @@ h3 {
 
 /* KUVANVAIHTO TOIMINTO */
 
-#slide1:checked ~ .carousel {
+#slide1:checked~.carousel {
     transform: translateX(0%);
 }
 
-#slide2:checked ~ .carousel {
+#slide2:checked~.carousel {
     transform: translateX(-20%);
 }
 
-#slide3:checked ~ .carousel {
+#slide3:checked~.carousel {
     transform: translateX(-40%);
 }
 
-#slide4:checked ~ .carousel {
+#slide4:checked~.carousel {
     transform: translateX(-60%);
 }
 
