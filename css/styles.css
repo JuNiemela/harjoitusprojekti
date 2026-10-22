@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     /*SISÄLLÖN YLIVUODON SELVITYS ALLA*/
-    /*outline: 1px solid red;*/ 
+    /*outline: 1px solid red;*/
 }
 
 body {
@@ -73,11 +73,11 @@ body {
     height: auto;
 }
 
-.logo-txt{
+.logo-txt {
     font-size: 1.5rem;
     font-style: italic;
     letter-spacing: -0.05rem;
-    color:rgb(77, 76, 76);
+    color: rgb(77, 76, 76);
     text-decoration: none;
     text-align: center;
 }
@@ -264,7 +264,7 @@ h3 {
 /*----------------------*/
 
 .tekstit {
-    text-align: justify;
+    text-align: left;
     margin-bottom: 10px;
     background-color: antiquewhite;
     padding: 40px;
@@ -278,6 +278,8 @@ h3 {
 
 /*TEKSTIT*/
 .tekstit p {
+    text-align: left;
+    font-size: 1.1rem;
     margin-bottom: 25px;
 
 }
@@ -292,22 +294,24 @@ article {
 /*  TUOTEKORTIT  */
 /*---------------*/
 
-.card-container{
+.card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
 }
 
-.product-card{
+.product-card {
     display: grid;
     grid-template-rows: 220px 1fr;
-    background-color: beige;
+    background-color: rgb(253, 251, 241);
     border-radius: 15px;
     overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.product-card img{
+.product-card img {
     width: 100%;
     height: 220px;
     object-fit: cover;
@@ -316,20 +320,27 @@ article {
     border-radius: 15px;
 }
 
-.card-content{
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-content {
     display: grid;
-    grid-template-rows: 70px 100px auto auto;
+    grid-template-rows: auto 1fr auto auto;
     padding: 15px;
     gap: 12px;
 }
 
-.card-content h3{
+.card-content h3 {
     font-size: 1.3rem;
+    margin: 0;
 }
 
-.card-content p{
+.card-content p {
     font-size: 1.2rem;
     margin: 0;
+    line-height: 1.6;
 }
 
 .price {
@@ -346,7 +357,7 @@ article {
     background-color: rgb(253, 192, 117);
     border-radius: 5px;
     text-decoration: none;
-    color:black;
+    color: black;
     text-align: center;
     font-weight: bold;
     transition: background-color 0.2s;
@@ -451,11 +462,11 @@ article {
 }
 
 .footer-nav a:hover {
-    background-color:rgb(255, 219, 164);
+    background-color: rgb(255, 219, 164);
     color: black;
 }
 
-.footer-nav a.active{
-    background-color:rgb(255, 219, 164);
+.footer-nav a.active {
+    background-color: rgb(255, 219, 164);
     border-radius: 5px;
 }
