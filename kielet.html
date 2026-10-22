@@ -7,27 +7,43 @@
     <link href="css/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="images/svg+xml">
     <title>Kielet</title>
 </head>
 
 <body>
     <div class="container">
 
+        <!-- HEADER-->
         <header class="header">
             <a href="index.html">
                 <img class="logo" src="images/logo.png" alt="logossa virityskoneisto sekä teksti kieli ja kitara">
             </a>
+            <p class="logo-txt">Laadukkaat soittimet jokaiseen tarpeeseen</p>
+
         </header>
 
+        <!-- NAVIGATION-->
         <nav class="nav">
             <ul>
                 <li><a href="index.html">Etusivu</a></li>
-                <li><a href="tuotteet.html">Tuotteet</a></li>
-                <li><a href="kitarat.html">Kitarat</a></li>
-                <li><a href="kielet.html" class="active">Kielet</a></li>
+
+                <!-- DROPDOWN VALIKKO-->
+                <li class="dropdown">
+                    <a href="tuotteet.html">Tuotteet</a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="kitarat.html">Kitarat</a></li>
+                        <li><a href="kielet.html" class="active">Kielet</a></li>
+                    </ul>
+                </li>
+                <!-- DROPDOWN VALIKKO PÄÄTTYY-->
+
                 <li><a href="yhteys.html">Yhteystiedot</a></li>
             </ul>
         </nav>
+
+        <!-- SISÄLTÖALUE-->
         <main class="main">
 
             <section class="otsikot"> <!--Tervehdys teksti-->
@@ -71,6 +87,7 @@
                 </section>
             </article>
         </main>
+        <!-- FOOTERI -->
         <footer class="footer"> <!--Footeri-->
             <div class="footer-left">
                 <a href="index.html">
@@ -80,6 +97,7 @@
                 <p class="copyright">© 2026 Kieli ja Kitara. Kaikki oikeudet pidätetään.</p>
             </div>
 
+            <!-- NAVIGOINTI -->
             <nav class="footer-nav"> <!--Navigointi linkit-->
                 <ul>
                     <li><a href="index.html">Etusivu</a></li>
@@ -90,6 +108,7 @@
                 </ul>
             </nav>
         </footer>
+        <!-- FOOTERI PÄÄTTYY-->
     </div>
 </body>
 
