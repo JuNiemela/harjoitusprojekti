@@ -1,78 +1,79 @@
-/*--------------*/
-/*PERUSASETUKSET*/
-/*--------------*/
+/*====================*/
+/* PERUSASETUKSET     */
+/*====================*/
+
+/* Nollataan selaimen oletusmarginaalit ja täytteet
+   sekä otetaan käyttöön border-box */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /*SISÄLLÖN YLIVUODON SELVITYS ALLA*/
+
+    /*SISÄLLÖN YLIVUODON DEBUGGAUS ALLA*/
     /*outline: 1px solid red;*/
 }
 
+/* Sivuston yleiset fontti- ja väriasetukset */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: bisque;
-    /*TAUSTAVÄRI*/
     color: rgb(77, 76, 76);
-    /*PERUSTEKSTIN VÄRI*/
+
 }
 
-/*-------------------------*/
-/* CONTAINER (GRID-LAYOUT) */
-/*-------------------------*/
+/*====================*/
+/* CONTAINER          */
+/*====================*/
 
+/* Sivun pääasettelu Gridillä */
 .container {
     background-color: bisque;
-    /*TAUSTAVÄRI*/
     width: 100%;
     max-width: 100%;
-    /*TÄYTTÄÄ KOKO IKKUNAN*/
     margin: 0;
     padding: 0;
-    /*-GRID ASETUKSET JA ASETTELU-*/
+
+    /* Header, navigaatio, sisältö ja footer */
     display: grid;
-    /*SIVUN RAKENNE GRIDILLÄ*/
     grid-template-columns: 1fr;
-    /*YKSI PALSTA*/
     grid-template-rows: auto auto 1fr auto;
-    /*HEADER, NAV, MAIN, FOOTER*/
     grid-template-areas:
         "header"
         "nav"
         "main"
         "footer";
     min-height: 100vh;
-    /*SIVUN MINIMI KORKEUS KOKO IKKUNAN VERRAN*/
+    /* Sivu täyttää vähintään koko selainikkunan korkeuden */
 }
 
-/*------------------*/
-/*      HEADER      */
-/*------------------*/
 
+/*====================*/
+/* HEADER             */
+/*====================*/
+
+/* Headerin sisältö jaetaan kolmeen osaan:
+   logo, otsikko ja mahdollinen oikean reunan sisältö */
 .header {
     grid-area: header;
     /*GRID AREA NAME*/
     display: grid;
     grid-template-columns: auto 1fr auto;
-    /*LOGO + TYHJÄ TILA + MAHDOLLINEN OIKEA ELEMENTTI*/
     align-items: center;
     padding: 20px;
     background-color: rgb(253, 192, 117);
-    /*TAUSTAVÄRI*/
     border-bottom: 1px solid black;
     gap: 20px;
 }
 
-/*--------------*/
-/*      LOGO    */
-/*--------------*/
 
+/* Logon koko mukautuu näytön mukaan */
 .logo {
     width: 100%;
     max-width: 250px;
     height: auto;
 }
 
+/* Sivuston logotekstin ulkoasu */
 .logo-txt {
     font-size: 1.5rem;
     font-style: italic;
@@ -82,20 +83,23 @@ body {
     text-align: center;
 }
 
-/*--------------*/
-/*      NAV     */
-/*--------------*/
 
+
+/*====================*/
+/* NAVIGAATIO         */
+/*====================*/
+
+/* Sivuston päävalikko */
 .nav {
     grid-area: nav;
     /*GRID AREA NAME*/
     background-color: rgb(255, 219, 164);
-    /*TAUSTAVÄRI*/
     border-bottom: 1px solid black;
     padding: 10px 0;
     margin-bottom: 20px;
 }
 
+/* Linkit järjestetään automaattisesti näytön leveyden mukaan */
 .nav>ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, auto));
@@ -104,6 +108,7 @@ body {
     justify-content: center;
 }
 
+/* Linkkien perusmuotoilu */
 .nav a {
     color: black;
     text-decoration: none;
@@ -111,22 +116,30 @@ body {
     padding: 5px;
 }
 
+/* Linkin hover-efekti */
 .nav a:hover {
     background-color: rgb(253, 192, 117);
     color: black;
 }
 
+/* Korostaa aktiivisen sivun valikossa */
 nav a.active {
     background-color: rgb(253, 192, 117);
     border-radius: 5px;
 }
 
-/*DROPDOWN VALIKKO*/
 
+
+/*====================*/
+/* DROPDOWN-VALIKKO   */
+/*====================*/
+
+/* Toimii alasvetovalikon ankkurielementtinä */
 .dropdown {
     position: relative;
 }
 
+/* Alasvetovalikko on oletuksena piilotettu */
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -138,27 +151,32 @@ nav a.active {
     z-index: 1000;
 }
 
+/* Näytetään valikko hiiren ollessa päävalikon kohdalla */
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
+/* Poistetaan listamerkit */
 .dropdown-menu li {
     list-style: none;
 }
 
+/* Pudotusvalikon linkit */
 .dropdown-menu a {
     display: block;
     padding: 10px;
 }
 
+/* Hover-efekti pudotusvalikon linkeille */
 .dropdown-menu a:hover {
     background-color: rgb(253, 192, 117);
     color: black;
 }
 
-/*------------------*/
-/*      OTSIKOT     */
-/*------------------*/
+
+/*====================*/
+/* OTSIKOT            */
+/*====================*/
 
 h1 {
     margin-bottom: 25px;
@@ -175,10 +193,11 @@ h3 {
     font-family: "Montserrat", sans-serif;
 }
 
-/*------------*/
-/*  KARUSELLI */
-/*------------*/
+/*====================*/
+/* KARUSELLI          */
+/*====================*/
 
+/* Karusellin ulompi säiliö */
 .carousel-container {
     position: relative;
     width: 100%;
@@ -187,30 +206,32 @@ h3 {
     padding: 20px;
 }
 
-/* PIILOTETUT RADIONAPIT */
+/* Piilotetaan radionapit */
 .carousel-container input {
     display: none;
 }
 
+/* Karusellin kuvat asetellaan vierekkäin. Tässä käytössä Flex*/
 .carousel {
     display: flex;
     width: 250%;
     transition: transform 0.5s ease;
 }
 
+/* Yksittäinen karusellikortti */
 .carousel-card {
     width: 20%;
     flex-shrink: 0;
 }
 
+/* Karusellin kuvat */
 .carousel-card img {
     width: 98%;
     display: block;
     border-radius: 10px;
 }
 
-/* KUVANVAIHTO TOIMINTO */
-
+/* Kuvanvaihto radionappien avulla */
 #slide1:checked~.carousel {
     transform: translateX(0%);
 }
@@ -227,8 +248,7 @@ h3 {
     transform: translateX(-60%);
 }
 
-/* VAIHTOPISTEET */
-
+/* Karusellin navigointipisteet */
 .carousel-nav {
     display: flex;
     justify-content: center;
@@ -236,6 +256,7 @@ h3 {
     margin-top: 20px;
 }
 
+/* Navigointipainikkeet */
 .carousel-nav label {
     width: 15px;
     height: 15px;
@@ -245,6 +266,7 @@ h3 {
     transition: 0.3s;
 }
 
+/* Hover-efekti navigointipisteille */
 .carousel-nav label:hover {
     background: orange;
     transform: scale(1.2);
@@ -252,17 +274,17 @@ h3 {
 
 
 
-/* ----------------------------- */
-/* SISÄLLÖN OTSIKOT JA TEKSTIT   */
-/* ----------------------------- */
+
+/*====================*/
+/* SISÄLTÖTEKSTIT     */
+/*====================*/
+
+/* Keskittää otsikot */
 .otsikot {
     text-align: center;
 }
 
-/*----------------------*/
-/*  SISÄLLÖN TEKSTIT    */
-/*----------------------*/
-
+/* Tekstisisällön laatikko */
 .tekstit {
     text-align: left;
     width: fit-content;
@@ -274,10 +296,10 @@ h3 {
     border: 1px solid black;
     border-radius: 8px;
     word-wrap: break-word;
-    /*ESTÄÄ TEKSTIN YLIVUODON*/
+    /* Estää tekstin ylivuodon */
 }
 
-/*TEKSTIT*/
+/* Kappaleiden muotoilu */
 .tekstit p {
     text-align: left;
     font-size: 1.1rem;
@@ -285,16 +307,17 @@ h3 {
 
 }
 
+/* Rajataan artikkelin leveys */
 article {
     max-width: 80%;
     margin: 0 auto;
 }
 
+/*====================*/
+/* TUOTEKORTIT        */
+/*====================*/
 
-/*---------------*/
-/*  TUOTEKORTIT  */
-/*---------------*/
-
+/* Tuotekorttien containeri */
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -302,12 +325,14 @@ article {
     padding: 20px;
 }
 
+/* Poistetaan linkkien oletustyyli */
 .card-container a {
     text-decoration: none;
     color: inherit;
     text-align: center;
 }
 
+/* Yksittäinen tuotekortti */
 .product-card {
     display: grid;
     grid-template-rows: 220px 1fr;
@@ -318,6 +343,7 @@ article {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Tuotekortin kuva */
 .product-card img {
     width: 100%;
     height: 220px;
@@ -327,11 +353,13 @@ article {
     border-radius: 15px;
 }
 
+/* Tuotekortin hover */
 .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
+/* Tuotekortin sisältö */
 .card-content {
     display: grid;
     grid-template-rows: auto 1fr auto auto;
@@ -339,17 +367,20 @@ article {
     gap: 12px;
 }
 
+/* Tuotekortin otsikko */
 .card-content h3 {
     font-size: 1.3rem;
     margin: 0;
 }
 
+/* Kortin tekstisisältö */
 .card-content p {
     font-size: 1.2rem;
     margin: 0;
     line-height: 1.6;
 }
 
+/* Tuotekortin hinta */
 .price {
     font-size: 1.3rem;
     font-weight: bold;
@@ -358,6 +389,7 @@ article {
     text-align: center;
 }
 
+/* Painikkeen muotoilu */
 .button {
     padding: 10px;
     margin: 10px;
@@ -370,12 +402,16 @@ article {
     transition: background-color 0.2s;
 }
 
+/* Painikkeen hover-efekti */
 .button:hover {
     background-color: rgb(255, 219, 164);
 }
 
-/*TUOTESIVUN KORTIT*/
+/*====================*/
+/* TUOTESIVUN KORTIT  */
+/*====================*/
 
+/* Kategoriakorttien containeri */
 .products-page-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
@@ -384,6 +420,7 @@ article {
     padding: 20px;
 }
 
+/* Containerin linkityksen muotoilu*/
 .products-page-container a {
     display: block;
     width: 100%;
@@ -393,7 +430,8 @@ article {
     text-align: center;
 }
 
-.products-page-card{
+/* Mahdollistaa otsikon sijoittamisen kuvan päälle */
+.products-page-card {
     position: relative;
     display: block;
     width: 100%;
@@ -402,6 +440,7 @@ article {
     text-decoration: none;
 }
 
+/* Kategoriakortin kuva */
 .products-page-card img {
     display: block;
     width: 100%;
@@ -410,6 +449,7 @@ article {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Kategorian nimi kuvan päällä */
 .products-page-card h3 {
     position: absolute;
     top: 5%;
@@ -426,20 +466,18 @@ article {
     border-radius: 15px;
 }
 
+/* Hover-efekti kategoriakortille */
 .products-page-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
     cursor: pointer;
 }
 
+/*====================*/
+/* KIELISIVU          */
+/*====================*/
 
-
-
-
-/*---------------------------*/
-/*  KIELISIVUN KIELILISTA    */
-/*---------------------------*/
-
+/* Kielilistan asettelu */
 .kielilista ul {
     list-style: none;
     padding: 10px;
@@ -447,7 +485,7 @@ article {
     gap: 10px;
 }
 
-
+/* Kielisivun muotoilu */
 .kielilista {
     background: #f7f7f7;
     padding: 20px;
@@ -456,30 +494,34 @@ article {
     box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
 }
 
-/*KIELILISTA OTSIKOT*/
+/* Kielten otsikot listassa */
 .kielilista li strong {
     display: block;
     font-size: 1.1rem;
     margin-bottom: 10px;
 }
 
-/*-----------------*/
-/*      FOOTER     */
-/*-----------------*/
+/*====================*/
+/* FOOTER             */
+/*====================*/
 
+/* Footer jakautuu kahteen osaan:
+   vasen puoli sisältää logon ja copyrightin,
+   oikea puoli navigointilinkit */
 .footer {
     grid-area: footer;
     display: grid;
     grid-template-columns: auto 1fr;
-    /*VASEN: LOGO + COPYRIGHT, OIKEA: NAVIGAATIO*/
+
     align-items: start;
     padding: 10px 10px;
     margin-top: 25px;
+
     background-color: rgb(253, 192, 117);
     border-top: 1px solid black;
 }
 
-/*VASEN LAITA*/
+/* Footerin vasen osio */
 .footer-left {
     display: grid;
     grid-auto-flow: row;
@@ -487,7 +529,7 @@ article {
     gap: 5px;
 }
 
-/*LOGO*/
+/* Footerin logo */
 .footer-logo {
     max-width: 200px;
     height: auto;
@@ -495,29 +537,29 @@ article {
     margin-bottom: 5px;
 }
 
-/*COPYRIGHT*/
+/* Tekijänoikeusteksti */
 .copyright {
     font-size: 0.9rem;
     margin: 5px;
 }
 
-/*OIKEA LAITA*/
+/* Footerin navigaatioalue */
 .footer-nav {
     justify-self: end;
 }
 
+/* Footerin linkit näytetään allekkain */
 .footer-nav ul {
     display: grid;
     grid-auto-flow: row;
-    /*LINKIT PÄÄLLEKKÄIN*/
     gap: 10px;
     margin-right: 15px;
     padding: 5px;
     list-style: none;
     justify-items: end;
-    /*KOHDISTUU OIKEALLE*/
 }
 
+/* Footerin linkkien muotoilu */
 .footer-nav a {
     color: black;
     text-decoration: none;
@@ -526,11 +568,13 @@ article {
     border-radius: 5px;
 }
 
+/* Hover-efekti footerin linkeille */
 .footer-nav a:hover {
     background-color: rgb(255, 219, 164);
     color: black;
 }
 
+/* Korostaa aktiivisen sivun footerissa */
 .footer-nav a.active {
     background-color: rgb(255, 219, 164);
     border-radius: 5px;
