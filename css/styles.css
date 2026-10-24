@@ -265,6 +265,7 @@ h3 {
 
 .tekstit {
     text-align: left;
+    width: fit-content;
     margin-bottom: 10px;
     background-color: antiquewhite;
     padding: 40px;
@@ -299,6 +300,12 @@ article {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
+}
+
+.card-container a {
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
 }
 
 .product-card {
@@ -367,6 +374,44 @@ article {
     background-color: rgb(255, 219, 164);
 }
 
+/*TUOTESIVUN KORTIT*/
+
+.products-page-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 300px));
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.products-page-container a {
+    background-color: rgb(255, 219, 164);
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+}
+
+.products-page-card {
+    display: grid;
+    grid-template-rows: 300px auto;
+    background-color: rgb(253, 251, 241);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.products-page-card img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.products-page-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+}
 
 
 
