@@ -46,6 +46,13 @@ body {
     /* Sivu täyttää vähintään koko selainikkunan korkeuden */
 }
 
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 
 /*====================*/
 /* HEADER             */
@@ -303,8 +310,7 @@ h3 {
 /* Tekstisisällön laatikko */
 .tekstit {
     text-align: left;
-    width: fit-content;
-    margin-bottom: 10px;
+    margin: 20px;
     background-color: antiquewhite;
     padding: 40px;
     line-height: 1.5;
@@ -325,7 +331,6 @@ h3 {
 
 /* Rajataan artikkelin leveys */
 article {
-    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -439,7 +444,6 @@ article {
 /* Containerin linkityksen muotoilu*/
 .products-page-container a {
     display: block;
-    width: 100%;
     background-color: rgb(255, 219, 164);
     text-decoration: none;
     color: inherit;
@@ -450,7 +454,6 @@ article {
 .products-page-card {
     position: relative;
     display: block;
-    width: 100%;
     overflow: hidden;
     border-radius: 15px;
     text-decoration: none;
@@ -505,7 +508,6 @@ article {
 .kielilista {
     background: #f7f7f7;
     padding: 20px;
-    margin: 10px;
     border-radius: 10px;
     box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
 }
