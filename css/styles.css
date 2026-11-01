@@ -335,6 +335,25 @@ article {
 }
 
 /*====================*/
+/*      VIDEO         */
+/*====================*/
+
+/* Video containeri */
+.video {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+/* Video sisältö */
+.video video{
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    margin: 20px;
+}
+
+/*====================*/
 /* TUOTEKORTIT        */
 /*====================*/
 
