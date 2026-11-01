@@ -250,6 +250,7 @@ h3 {
 /* Karusellin kuvat */
 .carousel-card img {
     width: 98%;
+    height: auto;
     display: block;
     border-radius: 10px;
 }
@@ -318,15 +319,14 @@ h3 {
     border: 1px solid black;
     border-radius: 8px;
     word-wrap: break-word;
-    /* Estää tekstin ylivuodon */
 }
 
 /* Kappaleiden muotoilu */
 .tekstit p {
     text-align: left;
     font-size: 1.1rem;
-    margin-bottom: 25px;
-
+    margin-bottom: 5px;
+    word-wrap: break-word;
 }
 
 /* Rajataan artikkelin leveys */
@@ -350,7 +350,7 @@ article {
     width: 100%;
     max-width: 640px;
     height: auto;
-    margin: 20px;
+    margin-top: 20px;
 }
 
 /*====================*/
@@ -386,7 +386,7 @@ article {
 /* Tuotekortin kuva */
 .product-card img {
     width: 100%;
-    height: 220px;
+    height: auto;
     object-fit: cover;
     margin-top: 5px;
     padding: 5px;
