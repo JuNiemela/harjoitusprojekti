@@ -64,7 +64,7 @@ main {
     grid-area: header;
     /*GRID AREA NAME*/
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto auto auto;
     align-items: center;
     padding: 20px;
     background-color: rgb(253, 192, 117);
@@ -75,14 +75,14 @@ main {
 
 /* Logon koko mukautuu näytön mukaan */
 .logo {
-    width: 100%;
-    max-width: 250px;
+    max-width: 200px;
     height: auto;
+    margin-bottom: 5px;
 }
 
 /* Headerin logotekstin ulkoasu */
 .logo-txt {
-    font-size: 1.5rem;
+    font-size: 2.8vw;
     font-style: italic;
     letter-spacing: -0.05rem;
     color: rgb(77, 76, 76);
