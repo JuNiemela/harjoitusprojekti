@@ -557,6 +557,7 @@ article {
     margin: 40px auto;
     background-color: rgb(253, 251, 241);
     border: 1px solid black;
+    border-radius: 4px;
     padding: 20px;
     font-weight: bold;
 }

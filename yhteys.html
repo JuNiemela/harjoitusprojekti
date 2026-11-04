@@ -65,72 +65,73 @@
                 <form action="#" method="post">
                     <h3>Yhteydenottolomake</h3>
                     <p>Tähdellä (*) merkitys kentät ovat pakollisia</p>
-                </form>
-                <fieldset>
-                    <legend>Yhteystiedot</legend>
-                    <div class="kentta">
-                        <label for="name">
-                            Koko nimi:
-                            <span class="pakollinen">*</span>
-                        </label>
-                        <input type="text" id="name" name="kokonimi" placeholder="Etunimi Sukunimi" autocomplete="name"
-                            maxlength="100" required>
-                    </div>
-
-                    <div class="kentta">
-                        <label for="email">
-                            Sähköposti:
-                            <span class="pakollinen">*</span>
-                        </label>
-                        <input type="email" id="email" name="sahkoposti" placeholder="etunimi.sukunimi@esimerkki.fi"
-                            autocomplete="email" maxlength="100" required>
-                    </div>
-
-                    <div class="kentta">
-                        <label for="phone">
-                            Puhelin:
-                            <span class="pakollinen">*</span>
-                        </label>
-                        <input type="tel" id="phone" name="puhelin" placeholder="+358 40 123 4567" autocomplete="tel"
-                            maxlength="20">
-                    </div>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Yhteydenottotapa</legend>
-                    <div class="kentta">
-                        <label for="contact-method">
-                            Miten haluat meidän ottavan sinuun yhteyttä?
-                            <span class="pakollinen">*</span>
-                        </label>
-                        <div class="valinta">
-                            <input type="radio" id="contact-email" name="yhteydenottotapa" value="sahkoposti" required>
-                            <label for="contact-email">Sähköposti</label>
-                            <input type="radio" id="contact-phone" name="yhteydenottotapa" value="puhelin">
-                            <label for="contact-phone">Puhelin</label>
+                    <fieldset>
+                        <legend>Yhteystiedot</legend>
+                        <div class="kentta">
+                            <label for="name">
+                                Koko nimi:
+                                <span class="pakollinen">*</span>
+                            </label>
+                            <input type="text" id="name" name="kokonimi" placeholder="Etunimi Sukunimi"
+                                autocomplete="name" maxlength="100" required>
                         </div>
-                    </div>
-                </fieldset>
 
-                <fieldset>
-                    <legend>Viesti</legend>
-                    <div class="kentta">
-                        <label for="message">
-                            Viesti:
-                            <span class="pakollinen">*</span>
-                        </label>
-                        <textarea id="message" name="viesti" placeholder="Kirjoita viestisi tähän..." rows="5"
-                            maxlength="1000" required></textarea>
+                        <div class="kentta">
+                            <label for="email">
+                                Sähköposti:
+                                <span class="pakollinen">*</span>
+                            </label>
+                            <input type="email" id="email" name="sahkoposti" placeholder="etunimi.sukunimi@esimerkki.fi"
+                                autocomplete="email" maxlength="100" required>
+                        </div>
+
+                        <div class="kentta">
+                            <label for="phone">
+                                Puhelin:
+                                <span class="pakollinen">*</span>
+                            </label>
+                            <input type="tel" id="phone" name="puhelin" placeholder="+358 40 123 4567"
+                                autocomplete="tel" maxlength="20">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Yhteydenottotapa</legend>
+                        <div class="kentta">
+                            <label for="contact-method">
+                                Miten haluat meidän ottavan sinuun yhteyttä?
+                                <span class="pakollinen">*</span>
+                            </label>
+                            <div class="valinta">
+                                <input type="radio" id="contact-email" name="yhteydenottotapa" value="sahkoposti"
+                                    required>
+                                <label for="contact-email">Sähköposti</label>
+                                <input type="radio" id="contact-phone" name="yhteydenottotapa" value="puhelin">
+                                <label for="contact-phone">Puhelin</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Viesti</legend>
+                        <div class="kentta">
+                            <label for="message">
+                                Viesti:
+                                <span class="pakollinen">*</span>
+                            </label>
+                            <textarea id="message" name="viesti" placeholder="Kirjoita viestisi tähän..." rows="5"
+                                maxlength="1000" required></textarea>
+                        </div>
+                        <div class="valinta">
+                            <input type="checkbox" id="subscribe" name="tilaa-uutiskirje">
+                            <label for="subscribe">Haluan tilata uutiskirjeen</label>
+                        </div>
+                    </fieldset>
+                    <div class="painikkeet">
+                        <button type="submit">Lähetä viesti</button>
+                        <button type="reset" class="tyhjenna">Tyhjennä lomake</button>
                     </div>
-                    <div class="valinta">
-                        <input type="checkbox" id="subscribe" name="tilaa-uutiskirje">
-                        <label for="subscribe">Haluan tilata uutiskirjeen</label>
-                    </div>
-                </fieldset>
-                <div class="painikkeet">
-                    <button type="submit">Lähetä viesti</button>
-                    <button type="reset" class="tyhjenna">Tyhjennä lomake</button>
-                </div>
+                </form>
             </section>
             <!-- YHTEYDENOTTOLOMAKE PÄÄTTYY -->
 
