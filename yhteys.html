@@ -17,8 +17,8 @@
         <!-- HEADER ALKAA -->
         <header class="header">
             <a href="index.html">
-                <img class="logo" src="images/logo.png" alt="logossa virityskoneisto sekä teksti kieli ja kitara" 
-                width="200px" height="60px">
+                <img class="logo" src="images/logo.png" alt="logossa virityskoneisto sekä teksti kieli ja kitara"
+                    width="200px" height="60px">
             </a>
 
             <!-- HEADER TEKSTI -->
@@ -60,6 +60,80 @@
                     <h2>Ota meihin yhteyttä tai täytä yhteydenottolomake</h2>
             </section>
 
+            <!-- YHTEYDENOTTOLOMAKE ALKAA -->
+            <section class="lomake">
+                <form action="#" method="post">
+                    <h3>Yhteydenottolomake</h3>
+                    <p>Tähdellä (*) merkitys kentät ovat pakollisia</p>
+                </form>
+                <fieldset>
+                    <legend>Yhteystiedot</legend>
+                    <div class="kentta">
+                        <label for="name">
+                            Koko nimi:
+                            <span class="pakollinen">*</span>
+                        </label>
+                        <input type="text" id="name" name="kokonimi" placeholder="Etunimi Sukunimi" autocomplete="name"
+                            maxlength="100" required>
+                    </div>
+
+                    <div class="kentta">
+                        <label for="email">
+                            Sähköposti:
+                            <span class="pakollinen">*</span>
+                        </label>
+                        <input type="email" id="email" name="sahkoposti" placeholder="etunimi.sukunimi@esimerkki.fi"
+                            autocomplete="email" maxlength="100" required>
+                    </div>
+
+                    <div class="kentta">
+                        <label for="phone">
+                            Puhelin:
+                            <span class="pakollinen">*</span>
+                        </label>
+                        <input type="tel" id="phone" name="puhelin" placeholder="+358 40 123 4567" autocomplete="tel"
+                            maxlength="20">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Yhteydenottotapa</legend>
+                    <div class="kentta">
+                        <label for="contact-method">
+                            Miten haluat meidän ottavan sinuun yhteyttä?
+                            <span class="pakollinen">*</span>
+                        </label>
+                        <div class="valinta">
+                            <input type="radio" id="contact-email" name="yhteydenottotapa" value="sahkoposti" required>
+                            <label for="contact-email">Sähköposti</label>
+                            <input type="radio" id="contact-phone" name="yhteydenottotapa" value="puhelin">
+                            <label for="contact-phone">Puhelin</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Viesti</legend>
+                    <div class="kentta">
+                        <label for="message">
+                            Viesti:
+                            <span class="pakollinen">*</span>
+                        </label>
+                        <textarea id="message" name="viesti" placeholder="Kirjoita viestisi tähän..." rows="5"
+                            maxlength="1000" required></textarea>
+                    </div>
+                    <div class="valinta">
+                        <input type="checkbox" id="subscribe" name="tilaa-uutiskirje">
+                        <label for="subscribe">Haluan tilata uutiskirjeen</label>
+                    </div>
+                </fieldset>
+                <div class="painikkeet">
+                    <button type="submit">Lähetä viesti</button>
+                    <button type="reset" class="tyhjenna">Tyhjennä lomake</button>
+                </div>
+            </section>
+            <!-- YHTEYDENOTTOLOMAKE PÄÄTTYY -->
+
             <!-- TEKSTISISÄLTÖ ALKAA -->
             <article class="tekstit">
                 <h3>Yhteystiedot</h3>
@@ -81,6 +155,7 @@
                     yleensä 1–2 arkipäivän kuluessa.
                 </p>
             </article>
+
             <!-- TEKSTISISÄLTÖ PÄÄTTYY -->
         </main>
 
@@ -89,8 +164,7 @@
             <div class="footer-left">
                 <a href="index.html">
                     <img class="footer-logo" src="images/logo.png"
-                        alt="logossa virityskoneisto sekä teksti kieli ja kitara"
-                        width="200px" height="60px">
+                        alt="logossa virityskoneisto sekä teksti kieli ja kitara" width="200px" height="60px">
                 </a>
                 <!-- COPYRIGHT TEKSTI-->
                 <p class="copyright">© 2026 Kieli ja Kitara. Kaikki oikeudet pidätetään.</p>
