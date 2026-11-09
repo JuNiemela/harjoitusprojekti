@@ -22,6 +22,20 @@ body {
 }
 
 /*====================*/
+/* RESPONSIIVISUUS    */
+/*====================*/
+
+/* Pienellä näytöllä piilotetaan */
+@media (max-width: 860px) {
+    .kielitaulukko {
+        display: none;
+    }
+}
+
+
+
+
+/*====================*/
 /* CONTAINER          */
 /*====================*/
 
@@ -513,10 +527,8 @@ article {
 }
 
 /*====================*/
-/* KIELISIVU          */
+/* KIELILISTA         */
 /*====================*/
-
-
 
 /* Kielisivun muotoilu */
 .kielilista {
@@ -547,11 +559,39 @@ article {
     margin-bottom: 10px;
 }
 
+/*====================*/
+/* KIELITAULUKKO      */
+/*====================*/
+
+/* Taulukko */
+.kielitaulukko table {
+    width: 100%;
+    border-radius: 8px;
+    border-collapse: collapse;
+    border: 1px solid black;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Otsikkorivi */
+.kielitaulukko th {
+    padding: 10px;
+    background-color: rgb(253, 192, 117);
+    border: 1px solid black;
+}
+
+/* Taulukon solut */
+.kielitaulukko td {
+    padding: 10px;
+    background-color: antiquewhite;
+    border: 1px solid black;
+
+}
 
 /*====================*/
 /* LOMAKE             */
 /*====================*/
 
+/* Lomakkeen asettelu */
 .lomake {
     width: min(600px, calc(100% - 32px));
     margin: 40px auto;
@@ -562,6 +602,7 @@ article {
     font-weight: bold;
 }
 
+/* Lomakkeen muotoilu */
 form {
     background-color: rgb(253, 251, 241);
     padding: 20px;
@@ -570,6 +611,7 @@ form {
     border-radius: 4px;
 }
 
+/* Kenttien asettelu */
 fieldset {
     border: 1px solid black;
     border-radius: 4px;
@@ -577,21 +619,46 @@ fieldset {
     margin-bottom: 10px;
 }
 
+/* Kenttien asettelu */
 .kentta {
     margin-bottom: 15px;
 }
 
-
+/* Viimeinen kenttä */
 .kentta:last-child {
     margin-bottom: 0;
 }
 
+/* Kenttien otsikot */
 .kentta label {
     display: block;
     margin-bottom: 5px;
 }
 
+/* Kenttien placeholderit */
+input::placeholder{
+    padding-left: 3px;
+}
 
+/* Tekstikentän placeholder */
+textarea::placeholder{
+    padding-left: 3px;
+}
+
+/* Valintakenttien muotoilu */
+.valinta{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Valintakenttien otsikko */
+.valinta label {
+    display: inline;
+    margin-bottom: 0;
+}
+
+/* Syötekentät */
 input:not([type="radio"]):not([type="checkbox"]),
 select,
 textarea {
@@ -599,23 +666,28 @@ textarea {
     width: 100%;
 }
 
+/* Käyttäjän syötteiden validointi */
 input:user-invalid,
 select:user-invalid,
 textarea:user-invalid {
     border: 2px solid red;
 }
 
+/* Pakollinen *-merkki */
 .pakollinen {
     color: red;
     font-size: 0.9rem;
 }
 
+/* Painikkeet asettelu */
 .painikkeet {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    gap: 10px;
 }
 
+/* Painikkeet muotoilu */
 button {
     padding: 10px 20px;
     background-color: rgb(253, 192, 117);
@@ -625,11 +697,10 @@ button {
     font-weight: bold;
 }
 
+/* Painikkeet hover-efekti */
 button:hover {
     background-color: rgb(255, 219, 164);
 }
-
-
 
 
 /*====================*/
@@ -710,3 +781,4 @@ button:hover {
     background-color: rgb(255, 219, 164);
     border-radius: 5px;
 }
+

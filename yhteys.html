@@ -63,10 +63,12 @@
             <!-- YHTEYDENOTTOLOMAKE ALKAA -->
             <section class="lomake">
                 <form action="#" method="post">
+                    <!-- YHTEYDENOTTOLOMAKE OTSIKKO -->
                     <h3>Yhteydenottolomake</h3>
                     <p>Tähdellä (*) merkitys kentät ovat pakollisia</p>
                     <fieldset>
                         <legend>Yhteystiedot</legend>
+                        <!-- NIMI -->
                         <div class="kentta">
                             <label for="name">
                                 Koko nimi:
@@ -75,7 +77,7 @@
                             <input type="text" id="name" name="kokonimi" placeholder="Etunimi Sukunimi"
                                 autocomplete="name" maxlength="100" required>
                         </div>
-
+                        <!-- SÄHKÖPOSTI -->
                         <div class="kentta">
                             <label for="email">
                                 Sähköposti:
@@ -84,19 +86,20 @@
                             <input type="email" id="email" name="sahkoposti" placeholder="etunimi.sukunimi@esimerkki.fi"
                                 autocomplete="email" maxlength="100" required>
                         </div>
-
+                        <!-- PUHELIN -->
                         <div class="kentta">
                             <label for="phone">
                                 Puhelin:
                                 <span class="pakollinen">*</span>
                             </label>
                             <input type="tel" id="phone" name="puhelin" placeholder="+358 40 123 4567"
-                                autocomplete="tel" maxlength="20">
+                                autocomplete="tel" maxlength="20" required>
                         </div>
                     </fieldset>
 
                     <fieldset>
                         <legend>Yhteydenottotapa</legend>
+                        <!-- RADIOBUTTONS -->
                         <div class="kentta">
                             <label for="contact-method">
                                 Miten haluat meidän ottavan sinuun yhteyttä?
@@ -114,10 +117,9 @@
 
                     <fieldset>
                         <legend>Viesti</legend>
+                        <!-- TEKSTIALUE -->
                         <div class="kentta">
                             <label for="message">
-                                Viesti:
-                                <span class="pakollinen">*</span>
                             </label>
                             <textarea id="message" name="viesti" placeholder="Kirjoita viestisi tähän..." rows="5"
                                 maxlength="1000" required></textarea>
@@ -127,6 +129,7 @@
                             <label for="subscribe">Haluan tilata uutiskirjeen</label>
                         </div>
                     </fieldset>
+                    <!-- LÄHETÄ JA TYHJENNÄ NAPIT -->
                     <div class="painikkeet">
                         <button type="submit">Lähetä viesti</button>
                         <button type="reset" class="tyhjenna">Tyhjennä lomake</button>
