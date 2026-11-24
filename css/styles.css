@@ -619,6 +619,11 @@ fieldset {
     margin-bottom: 10px;
 }
 
+form p {
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
 /* Kenttien asettelu */
 .kentta {
     margin-bottom: 15px;
